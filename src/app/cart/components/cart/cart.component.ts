@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+  } 
 
   addItem() {
     let id = Math.ceil(Math.random() * 10000);
@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
                             'Product ' + id,
                             Math.ceil(Math.random() * 100),
                             1
-                            );
+                                  );
 
     this.cartService.addItem(item);
 
