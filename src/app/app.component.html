@@ -1,0 +1,35 @@
+<div>
+    <h2>Welcome to {{appTitle}}</h2>
+
+    <!-- 
+        composition
+        
+        app is parent component, 
+            header, footer, home etc are child components
+        header => home siblings
+    -->
+
+    <app-header></app-header>
+ 
+
+    <!-- step 3: routing , place holder for routed views 
+    
+        router-outlet comes from angular router module
+    -->
+
+    <router-outlet>
+    </router-outlet>
+
+    <!-- subscribe for child  event
+        then calls the handler, event binding
+
+        $event is address, passed in emit
+    -->
+
+    <app-footer [x-year]="copyrightYear + 2"
+                company="ShoppingApp"
+                [address]="address"
+                (contactEvent)="contactHandler($event)"
+    >
+</app-footer>
+</div>
